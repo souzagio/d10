@@ -36,8 +36,18 @@
 body{
     background-color: var(--cor0);
     font-family: var(--font-android);
-    
-    
+}
+
+a.externo::after{
+    content: '\00A0\1F517';
+}
+article > h2{
+    background-image: linear-gradient(to right, var(--cor1), white);
+}
+article > p > a{
+    background-color: var(--cor1);
+    text-decoration:  none;
+    color: var(--cor5);
 }
 header{
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
@@ -50,6 +60,7 @@ header{
 header > h1{
     color: white;
     font-family: var(--font-destaque);
+    font-weight: normal;
     font-size: 3em;
     margin-bottom: 10px;
     text-shadow: 21px 19px 1px rgba(0, 0, 0, 0.705);
@@ -84,7 +95,9 @@ nav >a:hover{
     transition: 0.5s;
 }
 main{
-    font-family: var(--font-destaque);
+    font-family: var(--font-padrao);
+    font-weight: bold;
+    font-size: 0.9em;
     color: var(--cor5);
     background-color: white;
     padding: 20px;
@@ -108,14 +121,18 @@ main img{
 main h1{
     color: var(--cor5);
     font-family: var(--font-android);
+    font-weight: normal;
+    font-size: 2.2em;
 }
 main h2{
 font-family: var(--font-android);
+font-weight: normal;
 }
 aside{
     background-color: var(--cor1);
     padding: 10px;
     border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
 }
 aside > ul{
     list-style-type: '\2714\00A0\00A0';
@@ -128,6 +145,10 @@ aside > h3{
     padding: 5px 5px 3px 9px;
     margin: -10px -10px 0px -10px;
     border-radius: 10px 10px 0px 0px;
+}
+article > p#nota{
+    margin-top: 14px;
+    padding-left: 6px;
 }
 footer{
     background-color: var(--cor5);
@@ -152,3 +173,18 @@ ul{
     padding: 6px;
 }
     
+div.reprodutor{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 10px;
+    padding-bottom: 50%;
+    position: relative;
+}
+
+div.reprodutor > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
